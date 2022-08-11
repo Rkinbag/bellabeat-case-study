@@ -76,30 +76,7 @@ The following object is masked from ‘package:tidyr’:
 Error in levels(user_type) : object 'user_type' not found
 > levels(data_by_usertype)
 NULL
-> data_by_usertype %>%
-+ group_by(user_type) %>%
-+ summarise(total = n()) %>%
-+ mutate(totals = sum(total)) %>%
-+ group_by(user_type) %>%
-+ summarise(total_percent = total / totals) %>%
-+ ggplot(aes(user_type,y=total_percent, fill=user_type)) +
-+     geom_col()+
-+     scale_y_continuous(labels = scales::percent) +
-+     theme(legend.position="none") +
-+     labs(title="User type distribution", x=NULL) +
-+     theme(legend.position="none", text = element_text(size = 20),plot.title = element_text(hjust = 0.5))
-> 
-> ggplot(data_by_usertype, aes(user_type, Calories, fill=user_type)) +
-+     geom_boxplot() +
-+     theme(legend.position="none") +
-+     labs(title="Calories burned by User type", x=NULL) +
-Error in is.unit(x) : 
-  VECTOR_ELT() can only be applied to a 'list', not a 'double'
-Error in UseMethod("depth") : 
-  no applicable method for 'depth' applied to an object of class "NULL"
-Error in (function ()  : 
-  VECTOR_ELT() can only be applied to a 'list', not a 'character'
-+     theme(legend.position="none", text = element_text(size = 20),plot.title = element_text(hjust = 0.5))> > > 
+
 > data_by_usertype %>%
 + group_by(user_type) %>%
 + summarise(total = n()) %>%
@@ -111,11 +88,16 @@ Error in (function ()  :
 +     scale_y_continuous(labels = scales::percent) +
 +     theme(legend.position="none") +
 +     labs(title="User type distribution", x=NULL) 
+![R 1](https://user-images.githubusercontent.com/97151154/184104793-9a2020f8-c963-488a-b787-4a100d33b8ee.PNG)
+
+
 > ggplot(data_by_usertype, aes(user_type, Calories, fill=user_type)) +
 +     geom_boxplot() +
 +     theme(legend.position="none") +
 +     labs(title="Calories burned by User type", x=NULL) +
 +     theme(legend.position="none", text = element_text(size = 20),plot.title = element_text(hjust = 0.5))
+ ![R2](https://user-images.githubusercontent.com/97151154/184104851-6f3cd176-5eba-45df-ac8e-c326d84936fd.PNG)
+
 > daily_data %>%
 + summarise(
 + distance = factor(case_when(
@@ -134,6 +116,9 @@ Error in (function ()  :
 +     facet_wrap(~distance)+
 +     labs(title="Calories burned by Steps and Distance",x=NULL) +
 +     theme(legend.position="none", text = element_text(size = 20),plot.title = element_text(hjust = 0.5))
+
+![R3](https://user-images.githubusercontent.com/97151154/184104912-e4c04e93-09d1-4ce9-9215-109642e0329d.PNG)
+
 > sleepType_by_userType <- daily_data %>%
 + group_by(Id) %>%
 + summarise(
@@ -166,6 +151,9 @@ Error in (function ()  :
 + scale_y_continuous(labels = scales::percent) +
 + labs(x=NULL, fill="Sleep type") + 
 + theme(legend.position="bottom",text = element_text(size = 20),plot.title = element_text(hjust = 0.5))
+ 
+ ![R4](https://user-images.githubusercontent.com/97151154/184104988-4c6ddb51-e46d-4752-85f4-8e590a45f5e6.PNG)
+
 
 After our analysis we have found the following trends that may assist with marketing of the Leaf:
 

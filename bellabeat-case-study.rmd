@@ -166,15 +166,10 @@ Error in (function ()  :
 + scale_y_continuous(labels = scales::percent) +
 + labs(x=NULL, fill="Sleep type") + 
 + theme(legend.position="bottom",text = element_text(size = 20),plot.title = element_text(hjust = 0.5))
-> ### To assist Bellabeat in improving the leaf, I would advice to use own tracking data for further analysis. Datasets used are small and can be biased as there are no demographic details of users. Knowing that our buyer persona are young and adult women I would encourage the finding of trends on own data to create a representative marketing strategy.
-> 
-> After our analysis we have found the following trends that may assist with marketing of the Leaf:
-Error: unexpected symbol in "After our"
-> 
-> 1) There seems a clear relation between higher intensity activity and calories burned so logging the activity with the device could be a good motivator to increase activity for weight reduction.
-Error: unexpected ')' in "1)"
-> 
-> 2) The data also seems to show a clear trend of improved sleep quality linked to the activity level pointing to a general reduction in stress thereby improving quality of life.
-Error: unexpected ')' in "2)"
-> 
-> Focus the marketing messages on higher activity improving sleep and lowering stress and on the fitness/losing weight aspects of the device. Highlighting the use of this device to track sleep and physical activity will encourage the user to increase activity and view improvement in their metrics.###
+
+After our analysis we have found the following trends that may assist with marketing of the Leaf:
+
+1) There seems a clear relation between higher intensity activity and calories burned so logging the activity with the device could be a good motivator to increase activity for weight reduction.
+
+2) The data also seems to show a clear trend of improved sleep quality linked to the activity level pointing to a general reduction in stress thereby improving quality of life.
+
